@@ -4,7 +4,7 @@
 
 Player::Player()
 {
-	hImage = LoadGraph("ƒQ[ƒ€‘fÞ/rocket_01.png");
+	hImage = LoadGraph("data/image/rocket_01.png");
 	assert(hImage > 0);
 
 	position.x = 0;
