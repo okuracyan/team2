@@ -154,6 +154,7 @@
     <ClInclude Include="Source\BootScene.h" />
     <ClInclude Include="Source\Enemy.h" />
     <ClInclude Include="Source\Player.h" />
+    <ClInclude Include="Source\Score.h" />
     <ClInclude Include="Source\Screen.h" />
     <ClInclude Include="Source\PlayScene.h" />
     <ClInclude Include="Source\SceneFactory.h" />

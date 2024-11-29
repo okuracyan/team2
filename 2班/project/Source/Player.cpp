@@ -4,7 +4,7 @@
 
 Player::Player()
 {
-	hImage = LoadGraph("data/image/rocket_01.png");
+	hImage = LoadGraph("data/image/rocket_01_fire.png");
 	assert(hImage > 0);
 
 	position.x = 0;
@@ -21,7 +21,7 @@ void Player::Update()
 	if (hImage) {
 		position.x += 2.0f;
 	}
-	else {
+	
 		if (CheckHitKey(KEY_INPUT_D) != 0)
 			position.x += 3.0f;
 		if (CheckHitKey(KEY_INPUT_A) != 0)
@@ -34,7 +34,7 @@ void Player::Update()
 			position.y += 1.0f;
 		if (CheckHitKey(KEY_INPUT_E) != 0)
 			position.y -= 1.0f;
-	}
+	
 }
 
 void Player::Draw()
