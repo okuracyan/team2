@@ -146,6 +146,7 @@
     <ClInclude Include="ImGui\imstb_textedit.h" />
     <ClInclude Include="ImGui\imstb_truetype.h" />
     <ClInclude Include="Library\App.h" />
+    <ClInclude Include="Source\Enemy2.h" />
     <ClInclude Include="Library\GameObject.h" />
     <ClInclude Include="Library\ObjectManager.h" />
     <ClInclude Include="Library\SceneBase.h" />
@@ -172,6 +173,7 @@
     <ClCompile Include="ImGui\imgui_tables.cpp" />
     <ClCompile Include="ImGui\imgui_widgets.cpp" />
     <ClCompile Include="Library\App.cpp" />
+    <ClCompile Include="Source\Enemy2.cpp" />
     <ClCompile Include="Library\main.cpp" />
     <ClCompile Include="Library\ObjectManager.cpp" />
     <ClCompile Include="Library\SceneManager.cpp" />

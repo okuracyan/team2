@@ -1,9 +1,11 @@
 #include "PlayScene.h"
 #include <DxLib.h>
 #include "Player.h"
+#include "Enemy2.h"
 PlayScene::PlayScene()
 {
 	Instantiate<Player>();
+	Instantiate<Enemy2>();
 }
 
 PlayScene::~PlayScene()

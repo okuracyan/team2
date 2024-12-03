@@ -54,6 +54,7 @@
       <Filter>PlayScene</Filter>
     </ClCompile>
     <ClCompile Include="Source\Player.cpp" />
+    <ClCompile Include="Source\Enemy2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Screen.h" />
@@ -130,6 +131,7 @@
     <ClInclude Include="Source\Score.h">
       <Filter>PlayScene</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Enemy2.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Library">
