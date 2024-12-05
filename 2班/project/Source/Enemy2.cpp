@@ -36,7 +36,9 @@ void Enemy2::Update()
 		bCenter.x = position.x + 32;
 		bCenter.y = position.y + 32;
 	}
+
 void Enemy2::Draw()
+
 {
 	DrawGraph(position.x, position.y, hImage, TRUE);
 }
