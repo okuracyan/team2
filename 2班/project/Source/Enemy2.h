@@ -9,7 +9,8 @@ public:
 	void Update() override;
 	void Draw() override;
 	int frameCounter;
-	int timer; // ŽžŠÔ‚ð‘ª‚é‚½‚ß
+	float timer; // ŽžŠÔ‚ð‘ª‚é‚½‚ß
 	int hImage; // ‰æ‘œ
+	bool dead;
 	VECTOR2 position;
 };

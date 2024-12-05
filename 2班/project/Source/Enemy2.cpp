@@ -12,7 +12,7 @@ Enemy2::Enemy2()
 	position.x = 500;
 	position.y = 300;
 	frameCounter = 0;
-	timer = 5;
+	timer = 0;
 
 
 }
@@ -24,29 +24,19 @@ Enemy2::~Enemy2()
 
 void Enemy2::Update()
 {
-		position.y += 1 * sin(timer);
+	timer += 0.1f;//ë¨Ç≥
+		position.y += 20 * sin(timer);//êUÇÍïù
 		if (position.x < 0) {
 				position.x = 0;
 			}
 		if (position.y > SCREEN_HEIGHT - 64) {
 				position.y = SCREEN_HEIGHT - 64;
 			}
-				
-			
+		VECTOR2 bCenter;
+		bCenter.x = position.x + 32;
+		bCenter.y = position.y + 32;
 	}
-   // if (hImage) {
-	//	position.y -= 1 * sin(timer);
-	//}
-
 void Enemy2::Draw()
 {
 	DrawGraph(position.x, position.y, hImage, TRUE);
 }
-
-//if (hImage) {
-		//position.y += 2.0f;
-
-
-	//else if (timer == 0) {
-		//position.y -= 2.0f;
-	//}
