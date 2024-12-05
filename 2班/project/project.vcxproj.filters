@@ -134,6 +134,7 @@
     <ClInclude Include="Source\config.h">
       <Filter>PlayScene</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Enemy2.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Library">
