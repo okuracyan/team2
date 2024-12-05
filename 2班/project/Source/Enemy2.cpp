@@ -34,19 +34,10 @@ void Enemy2::Update()
 				
 			
 	}
-   // if (hImage) {
-	//	position.y -= 1 * sin(timer);
-	//}
+
 
 void Enemy2::Draw()
 {
 	DrawGraph(position.x, position.y, hImage, TRUE);
 }
 
-//if (hImage) {
-		//position.y += 2.0f;
-
-
-	//else if (timer == 0) {
-		//position.y -= 2.0f;
-	//}
