@@ -146,6 +146,7 @@
     <ClInclude Include="ImGui\imstb_textedit.h" />
     <ClInclude Include="ImGui\imstb_truetype.h" />
     <ClInclude Include="Library\App.h" />
+    <ClInclude Include="Source\config.h" />
     <ClInclude Include="Source\Enemy2.h" />
     <ClInclude Include="Library\GameObject.h" />
     <ClInclude Include="Library\ObjectManager.h" />

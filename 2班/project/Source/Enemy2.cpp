@@ -25,12 +25,14 @@ void Enemy2::Update()
 {
 	if (hImage) {
 		position.y += 2.0f;
+		
+	}
 
-
+	
 	 if (timer == 0) {
 		position.y -= 2.0f;
 	}
-	}
+	
 	}
 
 void Enemy2::Draw()

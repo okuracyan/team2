@@ -1,6 +1,7 @@
 #include "Player.h"
 #include <DxLib.h>
 #include <cassert>
+#include "config.h"
 
 Player::Player()
 {
@@ -34,6 +35,19 @@ void Player::Update()
 			position.y += 1.0f;
 		if (CheckHitKey(KEY_INPUT_E) != 0)
 			position.y -= 1.0f;
+
+		if (position.x <= 0) {
+			position.x = 0;
+		}
+		if (position.x > SCREEN_WIDTH - 64) {
+			position.x = SCREEN_WIDTH - 64;
+		}
+		if (position.y <= 0) {
+			position.y = 0;
+		}
+		if (position.y > SCREEN_HEIGHT - 64) {
+			position.y = SCREEN_HEIGHT - 64;
+		}
 	
 }
 
