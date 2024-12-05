@@ -41,4 +41,5 @@ void Enemy2::Draw()
 
 {
 	DrawGraph(position.x, position.y, hImage, TRUE);
+	DrawCircle(position.x + 32, position.y + 32, 30, GetColor(255, 0, 0), 0);
 }
