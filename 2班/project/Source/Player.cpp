@@ -53,7 +53,7 @@ void Player::Update()
 	std::list<Enemy2*> bCenter = FindGameObjects<Enemy2>();
 	for (Enemy2* e : bCenter) {
 		if (CircleHit(position, e->position, 56)) {
-
+			DestroyMe();
 
 		}
 	}
