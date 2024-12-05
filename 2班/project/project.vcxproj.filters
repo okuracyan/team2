@@ -131,7 +131,6 @@
     <ClInclude Include="Source\Score.h">
       <Filter>PlayScene</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Enemy2.h" />
     <ClInclude Include="Source\config.h">
       <Filter>PlayScene</Filter>
     </ClInclude>
