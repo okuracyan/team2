@@ -50,8 +50,8 @@ void Player::Update()
 	if (position.y > SCREEN_HEIGHT - 64) {
 		position.y = SCREEN_HEIGHT - 64;
 	}
-	std::list<Enemy2*> ufos = FindGameObjects<Enemy2>();
-	for (Enemy2* e : ufos) {
+	std::list<Enemy2*> bCenter = FindGameObjects<Enemy2>();
+	for (Enemy2* e : bCenter) {
 		if (CircleHit(position, e->position, 56)) {
 
 
