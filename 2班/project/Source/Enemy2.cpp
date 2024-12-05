@@ -3,16 +3,18 @@
 #include <cassert>
 #include "PlayScene.h"
 #include <DxLib.h>
+#include "config.h"
+#include "../config.h"
 
 Enemy2::Enemy2()
 {
 	hImage = LoadGraph("data/image/ufo_08.png");
 	assert(hImage > 0);
-	position.x = 40;
-	position.y = 40;
+	position.x = 500;
+	position.y = 300;
 	frameCounter = 0;
 	timer = 5;
-	
+
 
 }
 
@@ -23,17 +25,29 @@ Enemy2::~Enemy2()
 
 void Enemy2::Update()
 {
-	if (hImage) {
-		position.y += 2.0f;
-
-
-	 if (timer == 0) {
-		position.y -= 2.0f;
+		position.y += 1 * sin(timer);
+		if (position.x < 0) {
+				position.x = 0;
+			}
+		if (position.y > SCREEN_HEIGHT - 64) {
+				position.y = SCREEN_HEIGHT - 64;
+			}
+				
+			
 	}
-	}
-	}
+   // if (hImage) {
+	//	position.y -= 1 * sin(timer);
+	//}
 
 void Enemy2::Draw()
 {
 	DrawGraph(position.x, position.y, hImage, TRUE);
 }
+
+//if (hImage) {
+		//position.y += 2.0f;
+
+
+	//else if (timer == 0) {
+		//position.y -= 2.0f;
+	//}
