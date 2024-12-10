@@ -24,7 +24,7 @@ Enemy2::~Enemy2()
 
 void Enemy2::Update()
 {
-	timer += 0.1f;//‘¬‚³
+	timer += 0.07f;//‘¬‚³
 		position.y += 20 * sin(timer);//U‚ê•
 		if (position.x < 0) {
 				position.x = 0;
