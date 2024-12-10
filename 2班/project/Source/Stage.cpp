@@ -40,6 +40,18 @@ Stage::~Stage()
 
 void Stage::Draw()
 {
+	for (int j = 0; j < HEIGHT; j++) {
+		int y = j * 40 + 100;
+		for (int i = 0; i < WIDTH; i++) {
+			int x = i * 40 + 100;
+			if (map[j][i] == 1) {
+				DrawRectGraph(x - scroll, y, 0, 40, 40, 40, hImage, TRUE);
+			}
+			//if (map[j][i] == 2) {
+			//	DrawRectGraph(x, y, 120, 0, 40, 40, hImage, TRUE);
+			//}
+		}
+	}
 }
 
 int Stage::IsWallRight(VECTOR2 pos)

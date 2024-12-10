@@ -57,6 +57,13 @@ void Player::Update()
 
 		}
 	}
+	std::list<Enemy*> uCenter = FindGameObjects<Enemy>();
+	for (Enemy* e : uCenter) {
+		if (CircleHit(position, e->position, 56)) {
+			DestroyMe();
+
+		}
+	}
 }
 
 void Player::Draw()
