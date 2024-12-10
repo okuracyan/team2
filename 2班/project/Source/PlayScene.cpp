@@ -3,12 +3,13 @@
 #include "Player.h"
 #include "Enemy2.h"
 #include "Enemy.h"
+#include"Stage.h"
+#include"stage1.h"
 
 PlayScene::PlayScene()
 {
-	Instantiate<Player>();
-	Instantiate<Enemy2>();
-	Instantiate<Enemy>();
+	Stage* s = Instantiate<Stage>();
+	
 }
 
 PlayScene::~PlayScene()
