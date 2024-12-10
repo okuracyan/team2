@@ -1,8 +1,7 @@
 #pragma once
 #include "../Library/GameObject.h"
 #include "Vector2.h"
-class Player : public GameObject
-{
+class Player : public GameObject{
 public:
 	Player();
 	~Player();
