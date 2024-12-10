@@ -15,17 +15,17 @@ Stage::Stage()
 			if (map[j][i] == 9) {
 				Player* p = Instantiate<Player>();
 				p->position.x = i * 40 + 100;
-				p->position.y = j * 40 + 100;
+				p->position.y = j * 40 + 10;
 			}
 			if (map[j][i] == 2) {
 				Enemy* c = Instantiate<Enemy>();
 				c->position.x = i * 40 + 100;
-				c->position.y = j * 40 + 100;
+				c->position.y = j * 40 + 10;
 			}
 			if (map[j][i] == 3) {
 				Enemy2* c = Instantiate<Enemy2>();
 				c->position.x = i * 40 + 100;
-				c->position.y = j * 40 + 100;
+				c->position.y = j * 40 + 10;
 			}
 		}
 	}
