@@ -4,6 +4,7 @@
 #include "config.h"
 #include "Enemy.h"
 #include "Enemy2.h"
+#include "Stage.h"
 
 Player::Player()
 {
@@ -21,6 +22,7 @@ Player::~Player()
 
 void Player::Update()
 {
+	Stage* s = FindGameObject<Stage>();
 	if (hImage) {
 		position.x += 2.0f;
 	}
@@ -54,15 +56,21 @@ void Player::Update()
 	for (Enemy2* e : bCenter) {
 		if (CircleHit(position, e->position, 56)) {
 			DestroyMe();
-
+			hImage = LoadGraph("data/image/Bakuhatu.png");
 		}
 	}
 	std::list<Enemy*> uCenter = FindGameObjects<Enemy>();
 	for (Enemy* e : uCenter) {
 		if (CircleHit(position, e->position, 56)) {
 			DestroyMe();
-
+			hImage = LoadGraph("data/image/Bakuhatu.png");
 		}
+	}
+	if (position.x - s->scroll > 400) {
+		s->scroll = position.x - 400;
+	}
+	if (position.x - s->scroll < 0) {
+		s->scroll = position.x;
 	}
 }
 
