@@ -10,7 +10,13 @@ public:
 	VECTOR2 position;
 
 	int hImage;
-	bool bom;
+	bool IsBom;
+	int bomImage;
 	bool prevDushKey;
 
+	int patternX;
+	int patternY;
+	float animTimer;
+
+	bool dead;
 };

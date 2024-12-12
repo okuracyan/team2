@@ -26,16 +26,19 @@ Enemy2::~Enemy2()
 void Enemy2::Update()
 {
 	timer += 0.04f;//ë¨Ç≥
-		position.y += 10 * sin(timer);//êUÇÍïù
+		position.y += 5 * sin(timer);//êUÇÍïù
+		/*
 		if (position.x < 0) {
 				position.x = 0;
 			}
 		if (position.y > SCREEN_HEIGHT - 64) {
 				position.y = SCREEN_HEIGHT - 64;
 			}
+		*/
 		VECTOR2 bCenter;
-		bCenter.x = position.x + 32;
-		bCenter.y = position.y + 32;
+		bCenter.x = position.x + 40;
+		bCenter.y = position.y + 40;
+		
 	}
 
 void Enemy2::Draw()

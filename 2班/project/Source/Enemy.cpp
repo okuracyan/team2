@@ -21,8 +21,8 @@ Enemy::~Enemy()
 void Enemy::Update()
 {
 	VECTOR2 uCenter;
-	uCenter.x = position.x + 32;
-	uCenter.y = position.y + 32;
+	uCenter.x = position.x + 40;
+	uCenter.y = position.y + 40;
 }
 
 void Enemy::Draw()
