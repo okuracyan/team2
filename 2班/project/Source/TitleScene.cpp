@@ -2,17 +2,18 @@
 #include <DxLib.h>
 #include <cassert>
 #include "../Utility.h"
+#include "../Library/Time.h"
 
 TitleScene::TitleScene()
 {
 	bgHandle = LoadGraph("data/image/Title.png");
 	assert(bgHandle > 0);
-	pushKeyHandle= LoadGraph("data/image/.png");
-	
+	pushStartHandle= LoadGraph("data/image/メッセージ1_数字記号/メッセージ1_文字/GAMESTERT.png");
+	assert(pushStartHandle > 0);
 	//	[GAME START]表示設定の初期化
-	DrawKeyTimer = 0.0f;
+	DrawStertTimer = 0.0f;
 	alpha = 0;
-	ofset = (int)((float)MAX_ALPHA / DRAW_KEY_WAIT);
+	ofset = (int)((float)MAX_ALPHA / DRAW_STERT_WAIT);
 }
 
 TitleScene::~TitleScene()
@@ -25,12 +26,12 @@ void TitleScene::Update()
 	alpha += (int)(ofset * Time::DeltaTime());
 
 	//	前フレームからの経過時間を取得
-	DrawKeyTimer += Time::DeltaTime();
-	//	一定時間(DRAW_KEY_WAIT)経過したら、アルファ値の加算・減算を切りかえる
-	if (DrawKeyTimer >= DRAW_KEY_WAIT)
+	DrawStertTimer += Time::DeltaTime();
+	//	一定時間(DRAW_STERT_WAIT)経過したら、アルファ値の加算・減算を切りかえる
+	if (DrawStertTimer >= DRAW_STERT_WAIT)
 	{
 		ofset = -ofset;;
-		DrawKeyTimer = 0.0f;
+		DrawStertTimer = 0.0f;
 	}
 
 	//	[SPACE]キーが押されたらプレイシーンへ
@@ -48,5 +49,5 @@ void TitleScene::Draw()
 	DrawGraph(0, 0, bgHandle, TRUE);
 	//	[GAME START]
 	SetDrawBlendMode(DX_BLENDMODE_ALPHA, alpha);	//	アルファブレンディング
-	DrawGraph(KEY_GRAPH_X, KEY_GRAPH_Y, pushKeyHandle, TRUE);
+	DrawGraph(STERT_GRAPH_X, STERT_GRAPH_Y, pushStartHandle, TRUE);
 }
