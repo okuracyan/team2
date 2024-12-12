@@ -5,12 +5,10 @@
 
 TitleScene::TitleScene()
 {
-	//bgHandle = LoadGraph(TITLE_GRAPH_PATH);
 	bgHandle = LoadGraph("data/image/Title.png");
 	assert(bgHandle > 0);
-	//pushKeyHandle = LoadGraph(KEY_GRAPH_PATH);
-	//assert(pushKeyHandle > 0);
-
+	pushKeyHandle= LoadGraph("data/image/.png");
+	
 	//	[GAME START]表示設定の初期化
 	DrawKeyTimer = 0.0f;
 	alpha = 0;
@@ -48,7 +46,7 @@ void TitleScene::Draw()
 	//	タイトル画面
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);		//	通常描画
 	DrawGraph(0, 0, bgHandle, TRUE);
-	//	[PUSH SPACE KEY]
+	//	[GAME START]
 	SetDrawBlendMode(DX_BLENDMODE_ALPHA, alpha);	//	アルファブレンディング
 	DrawGraph(KEY_GRAPH_X, KEY_GRAPH_Y, pushKeyHandle, TRUE);
 }
