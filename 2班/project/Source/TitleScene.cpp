@@ -17,6 +17,8 @@ TitleScene::TitleScene()
 
 TitleScene::~TitleScene()
 {
+	DeleteGraph(bgHandle);
+	DeleteGraph(pushKeyHandle);
 }
 
 void TitleScene::Update()
@@ -49,4 +51,5 @@ void TitleScene::Draw()
 	//	[GAME START]
 	SetDrawBlendMode(DX_BLENDMODE_ALPHA, alpha);	//	アルファブレンディング
 	DrawGraph(KEY_GRAPH_X, KEY_GRAPH_Y, pushKeyHandle, TRUE);
+	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);		//	通常描画
 }
