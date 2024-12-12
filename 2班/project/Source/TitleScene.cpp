@@ -5,10 +5,16 @@
 
 TitleScene::TitleScene()
 {
-	bgHandle = LoadGraph(TITLE_GRAPH_PATH);
+	//bgHandle = LoadGraph(TITLE_GRAPH_PATH);
+	bgHandle = LoadGraph("data/image/Title.png");
 	assert(bgHandle > 0);
-	pushKeyHandle = LoadGraph(KEY_GRAPH_PATH);
-	assert(pushKeyHandle > 0);
+	//pushKeyHandle = LoadGraph(KEY_GRAPH_PATH);
+	//assert(pushKeyHandle > 0);
+
+	//	[GAME START]表示設定の初期化
+	DrawKeyTimer = 0.0f;
+	alpha = 0;
+	ofset = (int)((float)MAX_ALPHA / DRAW_KEY_WAIT);
 }
 
 TitleScene::~TitleScene()
@@ -25,29 +31,23 @@ void TitleScene::Update()
 	//	一定時間(DRAW_KEY_WAIT)経過したら、アルファ値の加算・減算を切りかえる
 	if (DrawKeyTimer >= DRAW_KEY_WAIT)
 	{
-		ofset = -ofset;
+		ofset = -ofset;;
 		DrawKeyTimer = 0.0f;
 	}
 
 	//	[SPACE]キーが押されたらプレイシーンへ
 	if (KeyUtility::CheckTrigger(KEY_INPUT_SPACE))
 	{
-		//	サウンドが終了するまで待つ
-		//PlaySoundFile(START_SOUND_PATH, DX_PLAYTYPE_NORMAL);
-
-		SceneManager::ChangeScene("PlayScene");
-	}
-
-	//	[ESC]キーが押されたらゲーム終了
-	if (KeyUtility::CheckTrigger(KEY_INPUT_ESCAPE))
-	{
-		SceneManager::Exit();
+		SceneManager::ChangeScene("PLAY");
 	}
 }
 
 
 void TitleScene::Draw()
 {
+	//	タイトル画面
+	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);		//	通常描画
+	DrawGraph(0, 0, bgHandle, TRUE);
 	//	[PUSH SPACE KEY]
 	SetDrawBlendMode(DX_BLENDMODE_ALPHA, alpha);	//	アルファブレンディング
 	DrawGraph(KEY_GRAPH_X, KEY_GRAPH_Y, pushKeyHandle, TRUE);
