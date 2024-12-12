@@ -54,14 +54,14 @@ void Player::Update()
 	}
 	std::list<Enemy2*> bCenter = FindGameObjects<Enemy2>();
 	for (Enemy2* e : bCenter) {
-		if (CircleHit(position, e->position, 56)) {
+		if (CircleHit(position, e->position, 32)) {
 			DestroyMe();
 			hImage = LoadGraph("data/image/Bakuhatu.png");
 		}
 	}
 	std::list<Enemy*> uCenter = FindGameObjects<Enemy>();
 	for (Enemy* e : uCenter) {
-		if (CircleHit(position, e->position, 56)) {
+		if (CircleHit(position, e->position, 32)) {
 			DestroyMe();
 			hImage = LoadGraph("data/image/Bakuhatu.png");
 		}
