@@ -10,7 +10,8 @@ Player::Player()
 {
 	hImage = LoadGraph("data/image/rocket_01_fire.png");
 	assert(hImage > 0);
-
+	bom = LoadGraph("data/image/Bakuhatu.png");
+	assert(bom > 0);
 	position.x = 0;
 	position.y = 0;
 }
@@ -40,12 +41,8 @@ void Player::Update()
 	if (CheckHitKey(KEY_INPUT_E) != 0)
 		position.y -= 1.0f;
 
-	if (position.x <= 0) {
-		position.x = 0;
-	}
-	if (position.x > SCREEN_WIDTH - 64) {
-		position.x = SCREEN_WIDTH - 64;
-	}
+
+	
 	if (position.y <= 0) {
 		position.y = 0;
 	}
@@ -56,14 +53,14 @@ void Player::Update()
 	for (Enemy2* e : bCenter) {
 		if (CircleHit(position, e->position, 32)) {
 			DestroyMe();
-			hImage = LoadGraph("data/image/Bakuhatu.png");
+			bom = true;
 		}
 	}
 	std::list<Enemy*> uCenter = FindGameObjects<Enemy>();
 	for (Enemy* e : uCenter) {
 		if (CircleHit(position, e->position, 32)) {
 			DestroyMe();
-			hImage = LoadGraph("data/image/Bakuhatu.png");
+			bom = true;
 		}
 	}
 	if (position.x - s->scroll > 400) {
@@ -76,5 +73,6 @@ void Player::Update()
 
 void Player::Draw()
 {
-	DrawGraph(position.x, position.y, hImage, TRUE);
+	Stage* s = FindGameObject<Stage>();
+	DrawRectGraph(position.x - s->scroll, position.y, 0, 0, 80, 80, hImage, TRUE);
 }

@@ -10,7 +10,7 @@ public:
 	VECTOR2 position;
 
 	int hImage;
-
+	bool bom;
 	bool prevDushKey;
 
 };

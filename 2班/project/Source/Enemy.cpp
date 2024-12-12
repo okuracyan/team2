@@ -2,7 +2,7 @@
 #include <cassert>
 
 #include"Player.h"
-
+#include "Stage.h"
 
 Enemy::Enemy()
 {
@@ -27,5 +27,7 @@ void Enemy::Update()
 
 void Enemy::Draw()
 {
-	DrawGraph(position.x, position.y, hImage, TRUE);
+	Stage* s = FindGameObject<Stage>();
+	DrawGraph(position.x - s->scroll, position.y, hImage, TRUE);
+
 }

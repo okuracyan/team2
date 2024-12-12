@@ -4,6 +4,7 @@
 #include "PlayScene.h"
 #include <DxLib.h>
 #include "config.h"
+#include "Stage.h"
 
 Enemy2::Enemy2()
 {
@@ -40,6 +41,8 @@ void Enemy2::Update()
 void Enemy2::Draw()
 
 {
-	DrawGraph(position.x, position.y, hImage, TRUE);
-	DrawCircle(position.x + 32, position.y + 32, 30, GetColor(255, 0, 0), 0);
+	Stage* s = FindGameObject<Stage>();
+	DrawRectGraph(position.x - s->scroll, position.y, 0, 0, 80, 80, hImage, TRUE);
+
+	
 }
