@@ -60,6 +60,9 @@
     <ClCompile Include="Utility.cpp">
       <Filter>Library</Filter>
     </ClCompile>
+    <ClCompile Include="Source\GameOver.cpp">
+      <Filter>TitleScene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Screen.h" />
@@ -172,6 +175,9 @@
     </ClInclude>
     <ClInclude Include="Source\Stage10.h">
       <Filter>PlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GameOver.h">
+      <Filter>TitleScene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
