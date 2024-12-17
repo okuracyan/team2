@@ -6,6 +6,7 @@
 #include "Enemy2.h"
 #include "Stage.h"
 #include "Time.h"
+#include"ResultScene.h"
 
 Player::Player()
 {
@@ -48,7 +49,10 @@ void Player::Update()
 
 	if (dead)
 	{
-		return;
+		{
+			SceneManager::ChangeScene("RESULT");
+		}
+		
 	}
 
 	Stage* s = FindGameObject<Stage>();

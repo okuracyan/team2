@@ -1,7 +1,7 @@
 #pragma once
 #include "../Library/gameObject.h"
 
-class GameOver : public SceneBase
+class ResultScene  : public SceneBase
 {
 private://	ゲームオーバー
 
@@ -17,8 +17,8 @@ private:
 	int ScoreHandle;		//	画像ハンドル(Score)
 
 public:
-	GameOver();
-	~GameOver();
+	ResultScene();
+	~ResultScene();
 	void Update() override;
 	void Draw() override;
 };
