@@ -162,6 +162,15 @@
     <ClInclude Include="Source\SceneFactory.h" />
     <ClInclude Include="Source\Stage.h" />
     <ClInclude Include="Source\Stage1.h" />
+    <ClInclude Include="Source\Stage10.h" />
+    <ClInclude Include="Source\Stage2.h" />
+    <ClInclude Include="Source\Stage3.h" />
+    <ClInclude Include="Source\Stage4.h" />
+    <ClInclude Include="Source\Stage5.h" />
+    <ClInclude Include="Source\Stage6.h" />
+    <ClInclude Include="Source\Stage7.h" />
+    <ClInclude Include="Source\Stage8.h" />
+    <ClInclude Include="Source\Stage9.h" />
     <ClInclude Include="Source\TitleScene.h" />
     <ClInclude Include="Source\Vector2.h" />
     <ClInclude Include="Utility.h" />
