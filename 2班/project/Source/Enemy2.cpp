@@ -25,6 +25,7 @@ Enemy2::~Enemy2()
 
 void Enemy2::Update()
 {
+	Stage* s = FindGameObject<Stage>();
 	timer += 0.04f;//‘¬‚³
 		position.y += 5 * sin(timer);//U‚ê•
 		/*
@@ -38,6 +39,9 @@ void Enemy2::Update()
 		VECTOR2 bCenter;
 		bCenter.x = position.x + 40;
 		bCenter.y = position.y + 40;
+		if (s->scroll > position.x) {
+			DestroyMe();
+		}
 		
 	}
 

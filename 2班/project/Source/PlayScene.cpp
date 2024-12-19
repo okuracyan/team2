@@ -4,7 +4,7 @@
 #include "Enemy2.h"
 #include "Enemy.h"
 #include"Stage.h"
-#include"stage1.h"
+#include"Stage1.h"
 
 PlayScene::PlayScene()
 {
@@ -25,7 +25,8 @@ PlayScene::~PlayScene()
 void PlayScene::Update()
 {
 
-	if ( (CheckHitKey(KEY_INPUT_T)) || CheckHitKey(KEY_INPUT_LSHIFT))
+
+	if ( (CheckHitKey(KEY_INPUT_T)) || CheckHitKey(KEY_INPUT_RSHIFT))
 	{
 		SceneManager::ChangeScene("TITLE");
 	}

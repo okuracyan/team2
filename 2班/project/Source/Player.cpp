@@ -47,12 +47,13 @@ void Player::Update()
 		}
 	}
 
-	if (dead )
+	if (IsBom)
 	{
+	
 		{
 			SceneManager::ChangeScene("RESULT");
 		}
-		
+
 	}
 
 	Stage* s = FindGameObject<Stage>();
@@ -61,17 +62,17 @@ void Player::Update()
 	}
 
 	if (CheckHitKey(KEY_INPUT_D) != 0)
-		position.x -= 3.0f;
+		position.x -= 1.0f;
 	if (CheckHitKey(KEY_INPUT_A) != 0)
-		position.x -= 7.0f;
+		position.x -= 4.0f;
 	if (CheckHitKey(KEY_INPUT_W) != 0)
 		position.y -= 8.0f;
 	if (CheckHitKey(KEY_INPUT_S) != 0)
 		position.y += 8.0f;
 
-	if (CheckHitKey(KEY_INPUT_Q) != 0)
+	if ((CheckHitKey(KEY_INPUT_LSHIFT)) & CheckHitKey(KEY_INPUT_Q))
 		position.y += 1.0f;
-	if (CheckHitKey(KEY_INPUT_E) != 0)
+	if ((CheckHitKey(KEY_INPUT_LSHIFT)) & CheckHitKey(KEY_INPUT_E))
 		position.y -= 1.0f;
 
 	if (CheckHitKey(KEY_INPUT_X) != 0)//ブースト、

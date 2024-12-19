@@ -3,6 +3,7 @@
 
 #include"Player.h"
 #include "Stage.h"
+#include "config.h"
 
 Enemy::Enemy()
 {
@@ -20,9 +21,14 @@ Enemy::~Enemy()
 
 void Enemy::Update()
 {
+	Stage* s = FindGameObject<Stage>();
 	VECTOR2 uCenter;
 	uCenter.x = position.x + 40;
 	uCenter.y = position.y + 40;
+	if (s->scroll > position.x) {
+		DestroyMe();
+	}
+
 }
 
 void Enemy::Draw()
