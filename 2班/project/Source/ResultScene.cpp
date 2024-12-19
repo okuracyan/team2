@@ -9,11 +9,13 @@ ResultScene::ResultScene()
 	assert(bgHandle > 0);
 	ScoreHandle = LoadGraph("data/image/メッセージ1_数字記号/メッセージ1_文字/GAMEOVERA.png");
 	assert(ScoreHandle > 0);
+	hBGImageII = LoadGraph("data/image/Haikei2.jpg");
 }
 
 ResultScene::~ResultScene()
 {
 	DeleteGraph(bgHandle);
+	DeleteGraph(hBGImageII);
 }
 
 void ResultScene::Update()
@@ -28,6 +30,7 @@ void ResultScene::Update()
 
 void ResultScene::Draw()
 {
+	DrawGraph(0, 0, hBGImageII, TRUE);
 	//	タイトル画面
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);		//	通常描画
 	DrawGraph(0, 0, bgHandle, TRUE);

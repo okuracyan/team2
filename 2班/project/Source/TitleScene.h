@@ -27,9 +27,11 @@ private:
 	int ofset;				//	加算するアルファ値
 	float DrawStertTimer;		//	タイマー
 
+
 public:
 	TitleScene();
 	~TitleScene();
 	void Update() override;
 	void Draw() override;
+	int hBGImageII;
 };

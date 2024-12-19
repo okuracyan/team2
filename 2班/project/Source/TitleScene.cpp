@@ -10,6 +10,7 @@ TitleScene::TitleScene()
 	assert(bgHandle > 0);
 	pushStartHandle= LoadGraph("data/image/メッセージ1_数字記号/メッセージ1_文字/GAMESTERT.png");
 	assert(pushStartHandle > 0);
+	hBGImageII = LoadGraph("data/image/Haikei2.jpg");
 	//	[GAME START]表示設定の初期化
 	DrawStertTimer = 0.0f;
 	alpha = 0;
@@ -18,6 +19,7 @@ TitleScene::TitleScene()
 
 TitleScene::~TitleScene()
 {
+	DeleteGraph(hBGImageII);
 	DeleteGraph(bgHandle);
 	DeleteGraph(pushStartHandle);
 }
@@ -46,6 +48,7 @@ void TitleScene::Update()
 
 void TitleScene::Draw()
 {
+	DrawGraph(0, 0, hBGImageII, TRUE);
 	//	タイトル画面
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);		//	通常描画
 	DrawGraph(0, 0, bgHandle, TRUE);

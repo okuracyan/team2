@@ -21,4 +21,5 @@ public:
 	~ResultScene();
 	void Update() override;
 	void Draw() override;
+	int hBGImageII;
 };

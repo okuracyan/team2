@@ -47,7 +47,7 @@ void Player::Update()
 		}
 	}
 
-	if (dead)
+	if (dead )
 	{
 		{
 			SceneManager::ChangeScene("RESULT");
