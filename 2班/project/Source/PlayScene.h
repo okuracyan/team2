@@ -8,4 +8,7 @@ public:
 	~PlayScene();
 	void Update() override;
 	void Draw() override;
+	int hBGImage;
+	int hBGImageI;
+	int hBGImageII;
 };

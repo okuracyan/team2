@@ -18,6 +18,11 @@ ResultScene::~ResultScene()
 
 void ResultScene::Update()
 {
+
+	if ((CheckHitKey(KEY_INPUT_T)) || CheckHitKey(KEY_INPUT_LSHIFT))
+	{
+		SceneManager::ChangeScene("TITLE");
+	}
 }
 
 
