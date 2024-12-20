@@ -21,7 +21,7 @@ ResultScene::~ResultScene()
 void ResultScene::Update()
 {
 
-	if ((CheckHitKey(KEY_INPUT_T)) || CheckHitKey(KEY_INPUT_LSHIFT))
+	if ((CheckHitKey(KEY_INPUT_T)) || CheckHitKey(KEY_INPUT_RSHIFT))
 	{
 		SceneManager::ChangeScene("TITLE");
 	}
@@ -38,5 +38,5 @@ void ResultScene::Draw()
 	DrawGraph(OVER_GRAPH_X, OVER_GRAPH_Y, ScoreHandle, TRUE);
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);		//	通常描
 
-	DrawString(0, 0, "左シフトでタイトル", GetColor(255, 255, 255));
+	
 }

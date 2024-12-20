@@ -35,6 +35,6 @@ void PlayScene::Update()
 void PlayScene::Draw()
 {
 	DrawGraph(0,0, hBGImageII, TRUE);
-	DrawString(0, 0, "左シフトでタイトル", GetColor(255, 255, 255));
+	
 	
 }
