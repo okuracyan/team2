@@ -180,6 +180,9 @@
     <ClInclude Include="Source\ResultScene.h">
       <Filter>TitleScene</Filter>
     </ClInclude>
+    <ClInclude Include="Source\StageManager.h">
+      <Filter>TitleScene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Library">

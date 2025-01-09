@@ -172,6 +172,7 @@
     <ClInclude Include="Source\Stage7.h" />
     <ClInclude Include="Source\Stage8.h" />
     <ClInclude Include="Source\Stage9.h" />
+    <ClInclude Include="Source\StageManager.h" />
     <ClInclude Include="Source\TitleScene.h" />
     <ClInclude Include="Source\Vector2.h" />
     <ClInclude Include="Utility.h" />
