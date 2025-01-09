@@ -45,19 +45,16 @@ void Player::Update()
 			patternX = 7;
 			DestroyMe();
 		}
-	}
 
-	if (IsBom)
-	{
-	
+		if(patternX >= 7)
 		{
 			SceneManager::ChangeScene("RESULT");
 		}
-
 	}
 
 	Stage* s = FindGameObject<Stage>();
-	if (hImage) {
+	if (!IsBom)
+	{
 		position.x += 5.0f;
 	}
 
