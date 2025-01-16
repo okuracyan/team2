@@ -11,6 +11,7 @@ TitleScene::TitleScene()
 	pushStartHandle= LoadGraph("data/image/メッセージ1_数字記号/メッセージ1_文字/GAMESTERT.png");
 	assert(pushStartHandle > 0);
 	hBGImageII = LoadGraph("data/image/Haikei2.jpg");
+	sound = LoadSoundMem(START_SOUND_PATH);
 	//	[GAME START]表示設定の初期化
 	DrawStertTimer = 0.0f;
 	alpha = 0;
@@ -42,7 +43,9 @@ void TitleScene::Update()
 	if (KeyUtility::CheckTrigger(KEY_INPUT_SPACE))
 	{
 		SceneManager::ChangeScene("PLAY");
+		PlaySoundFile(START_SOUND_PATH, DX_PLAYTYPE_NORMAL);
 	}
+
 }
 
 
