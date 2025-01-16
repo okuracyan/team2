@@ -51,6 +51,8 @@ Stage::Stage()
 				c->position.x = i * 40 + 100;
 				c->position.y = j * 40 + 10;
 			}
+			
+			
 		}
 	}
 	scroll = 0;

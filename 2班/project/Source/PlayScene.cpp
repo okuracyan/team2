@@ -5,6 +5,7 @@
 #include "Enemy.h"
 #include"Stage.h"
 #include"Stage1.h"
+#include <cassert>
 
 PlayScene::PlayScene()
 {
@@ -19,11 +20,13 @@ PlayScene::~PlayScene()
 {
 	//DeleteGraph(hBGImageI);
 	DeleteGraph(hBGImageII);
+	
 
 }
 
 void PlayScene::Update()
 {
+
 
 
 	if ( (CheckHitKey(KEY_INPUT_T)) || CheckHitKey(KEY_INPUT_RSHIFT))

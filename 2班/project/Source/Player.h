@@ -9,6 +9,7 @@ public:
 	void Draw();
 	VECTOR2 position;
 
+	int ClarhImage;
 	int hImage;
 	bool IsBom;
 	int bomImage;
