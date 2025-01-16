@@ -14,6 +14,8 @@ Player::Player()
 	assert(hImage > 0);
 	bomImage = LoadGraph("data/image/Bakuhatu.png");
 	assert(bomImage > 0);
+	sound = LoadSoundMem("data/sound/BAKUHATU.mp3");
+
 	position.x = 0;
 	position.y = 0;
 	IsBom = false;
@@ -46,8 +48,9 @@ void Player::Update()
 			DestroyMe();
 		}
 
-		if(patternX >= 7)
+		if (patternX >= 7)
 		{
+
 			SceneManager::ChangeScene("RESULT");
 		}
 	}
@@ -84,27 +87,33 @@ void Player::Update()
 	}
 
 
-	
+
 	if (position.y <= 0) {
 		position.y = 0;
 	}
 	if (position.y > SCREEN_HEIGHT - 37) {
 		position.y = SCREEN_HEIGHT - 37;
 	}
-	std::list<Enemy2*> bCenter = FindGameObjects<Enemy2>();
-	for (Enemy2* e : bCenter) {
-		if (CircleHit(position, e->position, 45)) {
-			//DestroyMe();
-			IsBom = true;
-			dead = true;
+	if (IsBom == false) {
+		std::list<Enemy2*> bCenter = FindGameObjects<Enemy2>();
+		for (Enemy2* e : bCenter) {
+			if (CircleHit(position, e->position, 45)) {
+				//DestroyMe();
+				IsBom = true;
+				dead = true;
+				PlaySoundMem(sound, DX_PLAYTYPE_BACK);
+
+			}
 		}
-	}
-	std::list<Enemy*> uCenter = FindGameObjects<Enemy>();
-	for (Enemy* e : uCenter) {
-		if (CircleHit(position, e->position, 45)) {
-			//DestroyMe();
-			IsBom = true;
-			dead = true;
+		std::list<Enemy*> uCenter = FindGameObjects<Enemy>();
+		for (Enemy* e : uCenter) {
+			if (CircleHit(position, e->position, 45)) {
+				//DestroyMe();
+				IsBom = true;
+				dead = true;
+				PlaySoundMem(sound, DX_PLAYTYPE_BACK);
+
+			}
 		}
 	}
 	if (position.x - s->scroll > 400) {
