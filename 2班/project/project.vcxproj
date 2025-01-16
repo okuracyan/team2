@@ -172,9 +172,9 @@
     <ClInclude Include="Source\Stage7.h" />
     <ClInclude Include="Source\Stage8.h" />
     <ClInclude Include="Source\Stage9.h" />
-    <ClInclude Include="Source\StageManager.h" />
     <ClInclude Include="Source\TitleScene.h" />
     <ClInclude Include="Source\Vector2.h" />
+    <ClInclude Include="Source\ClearScene.h" />
     <ClInclude Include="Utility.h" />
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +187,7 @@
     <ClCompile Include="ImGui\imgui_tables.cpp" />
     <ClCompile Include="ImGui\imgui_widgets.cpp" />
     <ClCompile Include="Library\App.cpp" />
+    <ClCompile Include="Source\ClearScene.cpp" />
     <ClCompile Include="Source\Enemy.cpp" />
     <ClCompile Include="Source\Enemy2.cpp" />
     <ClCompile Include="Library\main.cpp" />

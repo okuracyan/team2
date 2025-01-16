@@ -5,6 +5,8 @@
 #include "TitleScene.h"
 #include "PlayScene.h"
 #include"ResultScene.h"
+#include"ClearScene.h"
+
 
 SceneBase* SceneFactory::CreateFirst()
 {
@@ -25,7 +27,10 @@ SceneBase * SceneFactory::Create(const std::string & name)
 	{
 		return new ResultScene();
 	}
-
+	if (name == "CLEAR")
+	{
+		return new ClearScene();
+	}
 	MessageBox(NULL, ("éüÇÃÉVÅ[ÉìÇÕÇ†ÇËÇ‹ÇπÇÒ\n" + name).c_str(), "SceneFactory", MB_ICONERROR | MB_OK);
 	assert(false);
 	return nullptr;

@@ -64,6 +64,9 @@
       <Filter>TitleScene</Filter>
     </ClCompile>
     <ClCompile Include="Source\Score.cpp" />
+    <ClCompile Include="Source\ClearScene.cpp">
+      <Filter>TitleScene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Screen.h" />
@@ -180,7 +183,7 @@
     <ClInclude Include="Source\ResultScene.h">
       <Filter>TitleScene</Filter>
     </ClInclude>
-    <ClInclude Include="Source\StageManager.h">
+    <ClInclude Include="Source\ClearScene.h">
       <Filter>TitleScene</Filter>
     </ClInclude>
   </ItemGroup>
