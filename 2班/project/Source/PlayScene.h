@@ -11,4 +11,5 @@ public:
 	int hBGImage;
 	int hBGImageI;
 	int hBGImageII;
+	int hImage;
 };
