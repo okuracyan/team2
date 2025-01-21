@@ -9,12 +9,11 @@ public:
 	void Draw();
 	VECTOR2 position;
 
-<<<<<<< HEAD
+
 	const char* START_SOUND_PATH = "data/sound/BAKUHATU.mp3";
 
-=======
-	int ClarhImage;
->>>>>>> 9d1a53739ff806b6c4e5f0f306e322d043a575b9
+
+	int ClarhImage; 
 	int hImage;
 	bool IsBom;
 	int bomImage;

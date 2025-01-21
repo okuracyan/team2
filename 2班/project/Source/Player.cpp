@@ -8,18 +8,19 @@
 #include "Time.h"
 #include"ResultScene.h"
 
+
 Player::Player()
 {
 	hImage = LoadGraph("data/image/rocket_01_fire.png");
 	assert(hImage > 0);
 	bomImage = LoadGraph("data/image/Bakuhatu.png");
 	assert(bomImage > 0);
-<<<<<<< HEAD
+
 	sound = LoadSoundMem("data/sound/BAKUHATU.mp3");
 
-=======
+
 	
->>>>>>> 9d1a53739ff806b6c4e5f0f306e322d043a575b9
+ 
 	position.x = 0;
 	position.y = 0;
 	IsBom = false;
@@ -86,7 +87,7 @@ void Player::Update()
 		if (CheckHitKey(KEY_INPUT_SPACE) != 0)//ぶれーき
 			position.x -= 5.0f;
 
-<<<<<<< HEAD
+
 	if (CheckHitKey(KEY_INPUT_9)) // 自爆スイッチ
 	{
 		IsBom = true;
@@ -129,13 +130,13 @@ void Player::Update()
 	if (position.x - s->scroll < 0) {
 		s->scroll = position.x;
 	}
-=======
+
 		if (CheckHitKey(KEY_INPUT_9)) // 自爆スイッチ
 		{
 			IsBom = true;
 			dead = true;
 		}
->>>>>>> 9d1a53739ff806b6c4e5f0f306e322d043a575b9
+
 
 
 
