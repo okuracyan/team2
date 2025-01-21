@@ -2,7 +2,7 @@
 #include <DxLib.h>
 #include <cassert>
 #include "../Utility.h"
-#include "Player.h"
+#include "TitleScene.h"
 ClearScene::ClearScene()
 {
 	bgHandle = LoadGraph("data/image/メッセージ1_数字記号/メッセージ1_文字/SCORE.png");

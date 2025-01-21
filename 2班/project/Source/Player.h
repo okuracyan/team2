@@ -25,4 +25,5 @@ public:
 	float animTimer;
 
 	bool dead;
+	bool goal;
 };

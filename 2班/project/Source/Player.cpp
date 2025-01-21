@@ -7,6 +7,7 @@
 #include "Stage.h"
 #include "Time.h"
 #include"ResultScene.h"
+#include"ClearScene.h"
 
 
 Player::Player()
@@ -25,6 +26,7 @@ Player::Player()
 	position.y = 0;
 	IsBom = false;
 	dead = false;
+	goal = false;
 
 	patternX = 0;
 	patternY = 0;
@@ -105,7 +107,7 @@ void Player::Update()
 	if (IsBom == false) {
 		std::list<Enemy2*> bCenter = FindGameObjects<Enemy2>();
 		for (Enemy2* e : bCenter) {
-			if (CircleHit(position, e->position, 45)) {
+			if (CircleHit(position, e->position, 0)) {
 				//DestroyMe();
 				IsBom = true;
 				dead = true;
@@ -115,7 +117,7 @@ void Player::Update()
 		}
 		std::list<Enemy*> uCenter = FindGameObjects<Enemy>();
 		for (Enemy* e : uCenter) {
-			if (CircleHit(position, e->position, 45)) {
+			if (CircleHit(position, e->position, 0)) {
 				//DestroyMe();
 				IsBom = true;
 				dead = true;
@@ -131,48 +133,23 @@ void Player::Update()
 		s->scroll = position.x;
 	}
 
-		if (CheckHitKey(KEY_INPUT_9)) // 自爆スイッチ
-		{
-			IsBom = true;
-			dead = true;
-		}
-
-
-
-
-		if (position.y <= 0) {
-			position.y = 0;
-		}
-		if (position.y > SCREEN_HEIGHT - 37) {
-			position.y = SCREEN_HEIGHT - 37;
-		}
-		std::list<Enemy2*> bCenter = FindGameObjects<Enemy2>();
-		for (Enemy2* e : bCenter) {
-			if (CircleHit(position, e->position, 45)) {
-				//DestroyMe();
-				IsBom = true;
-				dead = true;
-			}
-		}
-		std::list<Enemy*> uCenter = FindGameObjects<Enemy>();
-		for (Enemy* e : uCenter) {
-			if (CircleHit(position, e->position, 45)) {
-				//DestroyMe();
-				IsBom = true;
-				dead = true;
-			}
-		}
+		
 		//if (position.x - s->scroll > 400) 
 			//s->scroll = position.x - 400;
-			if (s->scroll = 20100){
+		if (s->scroll = 20100); {
 				s->scroll > 20100;
-
 		}
+
 
 		if (position.x - s->scroll < 0) {
 			s->scroll = position.x;
+			
 		}
-
+		
+	}
+	if (position.x >= 20100)
+	{	 
+		SceneManager::ChangeScene("CLEAR");
 	}
 	
 }
