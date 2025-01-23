@@ -147,7 +147,7 @@ void Player::Update()
 		}
 		
 	}
-	if (position.x >= 20100)
+	if (position.x >= 21500)
 	{	 
 		SceneManager::ChangeScene("CLEAR");
 	}
