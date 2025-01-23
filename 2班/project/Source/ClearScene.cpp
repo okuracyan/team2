@@ -9,13 +9,17 @@ ClearScene::ClearScene()
 	assert(bgHandle > 0);
 	ScoreHandle = LoadGraph("data/image/メッセージ1_数字記号/メッセージ1_文字/CONGRATULATIONS.png");
 	assert(ScoreHandle > 0);
+	pushSpaceHandle = LoadGraph("data/image/PUSHSPACE.png");
+	assert(pushSpaceHandle > 0);
 	hBGImageII = LoadGraph("data/image/Haikei2.jpg");
+	
 }
 
 ClearScene::~ClearScene()
 {
 	DeleteGraph(bgHandle);
 	DeleteGraph(hBGImageII);
+	DeleteGraph(pushSpaceHandle);
 }
 
 void ClearScene::Update()
@@ -37,6 +41,6 @@ void ClearScene::Draw()
 	//	[GameClear]
 	DrawGraph(CLEAR_GRAPH_X, CLEAR_GRAPH_Y, ScoreHandle, TRUE);
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);		//	通常描
-
+	DrawGraph(SPACE_GRAPH_X, SPACE_GRAPH_Y, pushSpaceHandle, TRUE);
 
 }
