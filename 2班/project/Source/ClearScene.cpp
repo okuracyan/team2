@@ -21,7 +21,7 @@ ClearScene::~ClearScene()
 void ClearScene::Update()
 {
 
-	if ((CheckHitKey(KEY_INPUT_T)) || CheckHitKey(KEY_INPUT_RSHIFT))
+	if ((CheckHitKey(KEY_INPUT_SPACE)))
 	{
 		SceneManager::ChangeScene("TITLE");
 	}
