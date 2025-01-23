@@ -10,7 +10,7 @@
 PlayScene::PlayScene()
 {
 	Stage* s = Instantiate<Stage>();
-	//hBGImageI = LoadGraph("data/image/Haikei.jpg");
+	hBGImageI = LoadGraph("data/image/メッセージ1_数字記号/メッセージ1_文字/SCORE.png");//仮スコア
 	hBGImageII = LoadGraph("data/image/Haikei2.jpg");
 
 	
@@ -38,6 +38,6 @@ void PlayScene::Update()
 void PlayScene::Draw()
 {
 	DrawGraph(0,0, hBGImageII, TRUE);
-	
+	DrawGraph(0, 0, hBGImageI, TRUE);
 	
 }
