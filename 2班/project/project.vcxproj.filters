@@ -67,6 +67,9 @@
     <ClCompile Include="Source\ClearScene.cpp">
       <Filter>TitleScene</Filter>
     </ClCompile>
+    <ClCompile Include="Source\GameManager.cpp">
+      <Filter>PlayScene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Screen.h" />
@@ -185,6 +188,9 @@
     </ClInclude>
     <ClInclude Include="Source\ClearScene.h">
       <Filter>TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GameManager.h">
+      <Filter>PlayScene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
