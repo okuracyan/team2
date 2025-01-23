@@ -10,7 +10,11 @@ TitleScene::TitleScene()
 	assert(bgHandle > 0);
 	pushStartHandle= LoadGraph("data/image/メッセージ1_数字記号/メッセージ1_文字/GAMESTERT.png");
 	assert(pushStartHandle > 0);
+	pushSpaceHandle = LoadGraph("data/image/PUSHSPACE.png");
+	assert(pushSpaceHandle > 0);
+
 	hBGImageII = LoadGraph("data/image/Haikei2.jpg");
+
 	sound = LoadSoundMem(START_SOUND_PATH);
 	//	[GAME START]表示設定の初期化
 	DrawStertTimer = 0.0f;
@@ -59,4 +63,6 @@ void TitleScene::Draw()
 	SetDrawBlendMode(DX_BLENDMODE_ALPHA, alpha);	//	アルファブレンディング
 	DrawGraph(STERT_GRAPH_X, STERT_GRAPH_Y, pushStartHandle, TRUE);
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);		//	通常描画
+
+	DrawGraph(SPACE_GRAPH_X, SPACE_GRAPH_Y, pushSpaceHandle, TRUE);
 }
