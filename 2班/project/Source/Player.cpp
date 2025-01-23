@@ -17,7 +17,8 @@ Player::Player()
 	bomImage = LoadGraph("data/image/Bakuhatu.png");
 	assert(bomImage > 0);
 
-	sound = LoadSoundMem("data/sound/BAKUHATU.mp3");
+	sound1 = LoadSoundMem("data/sound/BAKUHATU.mp3");
+	sound2 = LoadSoundMem("data/sound/GOAL.mp3");
 
 
 	
@@ -111,7 +112,7 @@ void Player::Update()
 				//DestroyMe();
 				IsBom = true;
 				dead = true;
-				PlaySoundMem(sound, DX_PLAYTYPE_BACK);
+				PlaySoundMem(sound1, DX_PLAYTYPE_BACK);
 
 			}
 		}
@@ -121,7 +122,7 @@ void Player::Update()
 				//DestroyMe();
 				IsBom = true;
 				dead = true;
-				PlaySoundMem(sound, DX_PLAYTYPE_BACK);
+				PlaySoundMem(sound1, DX_PLAYTYPE_BACK);
 
 			}
 		}
@@ -150,6 +151,7 @@ void Player::Update()
 	if (position.x >= 21500)
 	{	 
 		SceneManager::ChangeScene("CLEAR");
+		PlaySoundMem(sound2, DX_PLAYTYPE_BACK);
 	}
 	
 }
