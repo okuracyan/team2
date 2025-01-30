@@ -48,5 +48,5 @@ void ClearScene::Draw()
 	DrawGraph(SPACE_GRAPH_X, SPACE_GRAPH_Y, pushSpaceHandle, TRUE);
 
 	Record* r = FindGameObject<Record>();
-	DrawFormatString(400, 400, GetColor(255, 0, 0), "%d", r->score);
+
 }

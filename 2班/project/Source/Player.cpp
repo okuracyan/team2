@@ -91,8 +91,8 @@ void Player::Update()
 
 		if (CheckHitKey(KEY_INPUT_X) != 0)//ブースト、
 			position.x += 30.0f;
-		if (CheckHitKey(KEY_INPUT_SPACE) != 0)//ぶれーき
-			position.x -= 5.0f;
+		//if (CheckHitKey(KEY_INPUT_SPACE) != 0)//ぶれーき
+			//position.x -= 5.0f;
 
 
 	if (CheckHitKey(KEY_INPUT_9)) // 自爆スイッチ
