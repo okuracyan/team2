@@ -49,6 +49,10 @@ void TitleScene::Update()
 		SceneManager::ChangeScene("PLAY");
 		PlaySoundFile(START_SOUND_PATH, DX_PLAYTYPE_NORMAL);
 	}
+	if (KeyUtility::CheckTrigger(KEY_INPUT_ESCAPE))
+	{
+		SceneManager::Exit();
+	}
 
 }
 

@@ -112,7 +112,7 @@ void Player::Update()
 	if (IsBom == false) {
 		std::list<Enemy2*> bCenter = FindGameObjects<Enemy2>();
 		for (Enemy2* e : bCenter) {
-			if (CircleHit(position, e->position, 0)) {
+			if (CircleHit(position, e->position, 40)) {
 				//DestroyMe();
 				IsBom = true;
 				dead = true;
@@ -122,7 +122,7 @@ void Player::Update()
 		}
 		std::list<Enemy*> uCenter = FindGameObjects<Enemy>();
 		for (Enemy* e : uCenter) {
-			if (CircleHit(position, e->position, 0)) {
+			if (CircleHit(position, e->position, 40)) {
 				//DestroyMe();
 				IsBom = true;
 				dead = true;
