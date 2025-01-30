@@ -3,9 +3,6 @@
 #include <cassert>
 #include "../Utility.h"
 #include "TitleScene.h"
-#include "Record.h"
-#include "Score.h"
-
 ClearScene::ClearScene()
 {
 	bgHandle = LoadGraph("data/image/メッセージ1_数字記号/メッセージ1_文字/SCORE.png");
@@ -15,7 +12,6 @@ ClearScene::ClearScene()
 	pushSpaceHandle = LoadGraph("data/image/PUSHSPACE.png");
 	assert(pushSpaceHandle > 0);
 	hBGImageII = LoadGraph("data/image/Haikei2.jpg");
-	Instantiate<Score>();
 	
 }
 
@@ -47,6 +43,4 @@ void ClearScene::Draw()
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);		//	通常描
 	DrawGraph(SPACE_GRAPH_X, SPACE_GRAPH_Y, pushSpaceHandle, TRUE);
 
-	Record* r = FindGameObject<Record>();
-	DrawFormatString(400, 400, GetColor(255, 0, 0), "%d", r->score);
 }

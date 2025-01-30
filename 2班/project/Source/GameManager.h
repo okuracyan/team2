@@ -3,8 +3,6 @@
 #include "../Utility.h"
 #include "Player.h"
 #include "Score.h"
-#include "Stage.h"
-
 
 enum class GAME_STATE
 {
@@ -32,7 +30,7 @@ private:
 	static const int SCORE_Y = 86;
 private:
 	GAME_STATE gameState; // Game State
-	GAME_STATE ScoreWait();
+	GAME_STATE ChainWait();
 	Score* score; // スコア情報
 	int numberHandle[10]; // 数値
 public:
@@ -44,5 +42,5 @@ public:
 	void AddPoint(int point) { score += point; }
 
 private:
-//	GAME_STATE Init(); // ゲームの初期設定
+	GAME_STATE Init(); // ゲームの初期設定
 };

@@ -8,7 +8,6 @@
 #include "Time.h"
 #include"ResultScene.h"
 #include"ClearScene.h"
-#include "Record.h"
 
 
 Player::Player()
@@ -17,9 +16,6 @@ Player::Player()
 	assert(hImage > 0);
 	bomImage = LoadGraph("data/image/Bakuhatu.png");
 	assert(bomImage > 0);
-	numimage = LoadGraph("data/imege/number.png");
-
-
 
 	sound1 = LoadSoundMem("data/sound/BAKUHATU.mp3");
 	sound2 = LoadSoundMem("data/sound/GOAL.mp3");
@@ -169,6 +165,5 @@ void Player::Draw()
 	{
 		DrawRectGraph(position.x - s->scroll -30, position.y -30, 120*patternX, 120*patternY, 120, 120, bomImage, TRUE);
 	}
-	int score = s->scroll*10;
-	FindGameObject<Record>()->score = score;
+
 }

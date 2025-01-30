@@ -6,14 +6,12 @@
 #include"Stage.h"
 #include"Stage1.h"
 #include <cassert>
-#include "Score.h"
 
 PlayScene::PlayScene()
 {
 	Stage* s = Instantiate<Stage>();
 	hBGImageI = LoadGraph("data/image/メッセージ1_数字記号/メッセージ1_文字/SCORE.png");//仮スコア
 	hBGImageII = LoadGraph("data/image/Haikei2.jpg");
-	Instantiate<Score>();
 
 	
 }

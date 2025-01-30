@@ -1,8 +1,6 @@
 #include <cassert>
 #include <math.h>
 #include "Score.h"
-#include "Record.h"
-
 // コンストラクタ
 Score::Score()
 {
@@ -14,7 +12,7 @@ Score::Score()
 		numberHandle[i] = LoadGraph(fileName); // 数値
 		assert(numberHandle[i] > 0);
 	}
-//	FindGameObject<Record>()->score = 0;
+	score = 0;
 }
 // デストラクタ
 Score::~Score()
@@ -24,14 +22,9 @@ Score::~Score()
 		DeleteGraph(numberHandle[i]);
 	}
 }
-void Score::Draw()
-{
-	DispScore(550, 5);
-}
 // スコアの表示
 void Score::DispScore(int x, int y)
 {
-	int score = FindGameObject<Record>()->score;
 	int numberX, numberY;
 	char numberText[MAX_DIGITS + 1];
 	int numCount = sprintf_s(numberText, "%d", score);

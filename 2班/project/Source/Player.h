@@ -16,7 +16,6 @@ public:
 	int ClarhImage; 
 	int hImage;
 	bool IsBom;
-	bool numimage;
 	int bomImage;
 	bool prevDushKey;
 	int sound1;

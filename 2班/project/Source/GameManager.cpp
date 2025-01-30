@@ -1,7 +1,5 @@
 #include <cassert>
 #include "GameManager.h"
-
-
 // コンストラクタ
 GameManager::GameManager()
 {
@@ -33,7 +31,7 @@ void GameManager::Update()
 	{
 		// ゲームの初期設定
 	case GAME_STATE::INIT:
-//		if (Init() == GAME_STATE::NEXT_STATE)
+		if (Init() == GAME_STATE::NEXT_STATE)
 		{
 			gameState = GAME_STATE::SET_BLOCK;
 		}
@@ -56,8 +54,14 @@ void GameManager::Draw()
 	score->DispScore(SCORE_X, SCORE_Y);
 }
 
-GAME_STATE GameManager::ScoreWait()
+GAME_STATE GameManager::ChainWait()
 {
-//		score->AddScore();
-	return gameState;
+	if ()
+	{
+
+	}
+	else
+	{
+
+	}
 }
