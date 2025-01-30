@@ -3,6 +3,9 @@
 #include <cassert>
 #include "../Utility.h"
 #include "Player.h"
+#include "Record.h"
+#include "Score.h"
+
 ResultScene::ResultScene()
 {
 	bgHandle = LoadGraph("data/image/メッセージ1_数字記号/メッセージ1_文字/SCORE.png");
@@ -12,6 +15,7 @@ ResultScene::ResultScene()
 	pushSpaceHandle = LoadGraph("data/image/PUSHSPACE.png");
 	assert(pushSpaceHandle > 0);
 	hBGImageII = LoadGraph("data/image/Haikei2.jpg");
+	Instantiate<Score>();
 }
 
 ResultScene::~ResultScene()
@@ -41,5 +45,5 @@ void ResultScene::Draw()
 	DrawGraph(OVER_GRAPH_X, OVER_GRAPH_Y, ScoreHandle, TRUE);
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);		//	通常描
 	DrawGraph(SPACE_GRAPH_X, SPACE_GRAPH_Y, pushSpaceHandle, TRUE);
-	
+
 }
