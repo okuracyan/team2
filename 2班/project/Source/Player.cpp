@@ -76,7 +76,7 @@ void Player::Update()
 		}
 
 		if (CheckHitKey(KEY_INPUT_D) != 0)
-			position.x -= 1.0f;
+			position.x += 5.0f;
 		if (CheckHitKey(KEY_INPUT_A) != 0)
 			position.x -= 4.0f;
 		if (CheckHitKey(KEY_INPUT_W) != 0)

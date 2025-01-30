@@ -25,7 +25,7 @@ void Enemy::Update()
 	VECTOR2 uCenter;
 	uCenter.x = position.x + 40;
 	uCenter.y = position.y + 40;
-	if (s->scroll > position.x+40) {
+	if (s->scroll > position.x) {
 		DestroyMe();
 	}
 
